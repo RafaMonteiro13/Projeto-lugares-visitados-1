@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.lugares.LugaresFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nome_do_local"
+            android:inputType="textCapSentences" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/input_layout_name"
+        app:layout_constraintStart_toStartOf="@+id/input_layout_name"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/data"
+            android:inputType="date" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_latitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/input_layout_name"
+        app:layout_constraintStart_toStartOf="@+id/input_layout_data"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_data">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_latitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/latitude"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_longitude"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/input_layout_name"
+        app:layout_constraintStart_toStartOf="@+id/input_layout_latitude"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout_latitude">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_longitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/latitude"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/button_subscriber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/ok"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/input_layout_longitude"
+        app:layout_constraintStart_toStartOf="@id/input_layout_longitude"
+        app:layout_constraintTop_toBottomOf="@id/input_layout_longitude" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
